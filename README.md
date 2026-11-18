@@ -6,6 +6,14 @@
 
 ## Arquitetura
 
+## Equipe
+
+| Integrante | RM |
+|---|---|
+| Eric de Carvalho Rodrigues | RM550249 |
+| Renato Izumi Ichikawa | RM99242 |
+| Bernardo Pinto Rocha | RM99209 |
+
 ```
 Airflow DAG agroconecta_pipeline_clima (diário 06:00, America/Sao_Paulo)
  ├─ coletar_ibge ───────► coletar_open_meteo ─┐
