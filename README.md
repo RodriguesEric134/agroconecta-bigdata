@@ -1,3 +1,7 @@
+> **AgroConecta** — Global Solution FIAP 2026.2 (CitizenTech) · ODS 2 e 13
+> Repositório da disciplina **Big Data Architecture & Data Integration**.
+> Automação (RPA): [agroconecta-rpa](https://github.com/RodriguesEric134/agroconecta-rpa)
+
 # Big Data — Pipeline de clima do AgroConecta
 
 ## Arquitetura
@@ -35,7 +39,7 @@ Databricks Job agroconecta_lakehouse:  01_bronze ─► 02_prata ─► 03_ouro
 
 ### 2. Airflow (Docker)
 ```bash
-cd bigdata/airflow
+cd airflow
 cp .env.example .env      # preencha DATABRICKS_HOST, DATABRICKS_TOKEN, DATABRICKS_JOB_ID
 docker compose up -d
 ```
@@ -44,7 +48,6 @@ Sem as variáveis do Databricks, o DAG grava só em `chegada/` e pula o envio (s
 
 ### 3. Testar a coleta sem Airflow
 ```bash
-cd bigdata
 PYTHONPATH=airflow/dags python -c "from pathlib import Path; from agroconecta import coletores as c; a,co=c.coletar_ibge(c.carregar_municipios(Path('airflow/config/municipios_atendidos.json')),Path('chegada'),'2026-11-06'); c.coletar_open_meteo(co,Path('chegada'),'2026-11-06')"
 ```
 

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Segredos
+.env
+*.env
+!.env.example
+
+# Dados gerados em runtime
+chegada/*
+!chegada/.gitkeep
+airflow/logs/
+airflow/plugins/
