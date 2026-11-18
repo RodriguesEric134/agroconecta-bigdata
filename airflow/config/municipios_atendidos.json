@@ -1,0 +1,15 @@
+{
+  "descricao": "Municípios atendidos pelo AgroConecta (códigos IBGE). Polos de agricultura familiar e hortifrúti que abastecem a CEAGESP.",
+  "municipios": [
+    {"codigo_ibge": 3550308, "observacao": "São Paulo/SP - referência CEAGESP"},
+    {"codigo_ibge": 3530607, "observacao": "Mogi das Cruzes/SP - cinturão verde (hortaliças)"},
+    {"codigo_ibge": 3519709, "observacao": "Ibiúna/SP - hortaliças"},
+    {"codigo_ibge": 3509502, "observacao": "Campinas/SP"},
+    {"codigo_ibge": 3524808, "observacao": "Jales/SP - fruticultura"},
+    {"codigo_ibge": 3549805, "observacao": "São José do Rio Preto/SP"},
+    {"codigo_ibge": 3170206, "observacao": "Uberlândia/MG"},
+    {"codigo_ibge": 4106902, "observacao": "Curitiba/PR"},
+    {"codigo_ibge": 2611101, "observacao": "Petrolina/PE - fruticultura irrigada"},
+    {"codigo_ibge": 5208707, "observacao": "Goiânia/GO"}
+  ]
+}

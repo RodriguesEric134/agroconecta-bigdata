@@ -1,0 +1,25 @@
+{
+  "name": "agroconecta_lakehouse",
+  "description": "Bronze -> Prata -> Ouro. Disparado diariamente pelo Airflow (DAG agroconecta_pipeline_clima).",
+  "max_concurrent_runs": 1,
+  "parameters": [
+    {"name": "catalogo", "default": "workspace"},
+    {"name": "data_referencia", "default": ""}
+  ],
+  "tasks": [
+    {
+      "task_key": "bronze",
+      "notebook_task": {"notebook_path": "/Workspace/Users/SEU_EMAIL/agroconecta/01_bronze", "source": "WORKSPACE"}
+    },
+    {
+      "task_key": "prata",
+      "depends_on": [{"task_key": "bronze"}],
+      "notebook_task": {"notebook_path": "/Workspace/Users/SEU_EMAIL/agroconecta/02_prata", "source": "WORKSPACE"}
+    },
+    {
+      "task_key": "ouro",
+      "depends_on": [{"task_key": "prata"}],
+      "notebook_task": {"notebook_path": "/Workspace/Users/SEU_EMAIL/agroconecta/03_ouro", "source": "WORKSPACE"}
+    }
+  ]
+}
